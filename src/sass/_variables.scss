@@ -1,0 +1,13 @@
+/* colors */
+$sidebar-menu: #ffffff;
+$general-font-color: #cccccc;
+$numbers: #000000;
+
+/* fonts */
+$general-font-style: "Times New Roman", Times, serif;
+$headers-font-style: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+h1 {
+  font-family: $general-font-style;
+  color: $general-font-color;
+}
