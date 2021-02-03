@@ -1,31 +1,255 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projekt indywidualny</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="vendor/bootstrap-grid.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    </head>
-    <body>
-<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
-<p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Maecenas blandit diam urna, eu <a href="#">dignissim</a> ex dignissim consequat. Duis porta lectus lorem, quis eleifend justo scelerisque eget. Duis ac sem et turpis tincidunt molestie in non ipsum. Maecenas ut augue erat. Phasellus eu est commodo est hendrerit tempor. Mauris dignissim ex vel magna aliquet, sit amet facilisis turpis tincidunt. Fusce quis blandit libero, sed dapibus nisl. Pellentesque vitae ligula sed tellus sagittis dapibus eu non metus. Mauris rutrum ligula ut sapien varius, pellentesque volutpat diam porta. Ut at nunc ac tortor dapibus sodales id at leo. Nunc posuere lorem non feugiat elementum. Nunc sagittis diam justo, nec malesuada sapien tristique id. Vivamus in consequat nibh. Etiam tempor id ligula a dapibus. Proin vitae arcu nulla.</p>
-<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-<ul>
-  <li>Lorem ipsum dolor, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
-  <li>Lorem ipsum dolor <strong>sit amet</strong></li>
-  <li>Lorem ipsum dolor <strong>sit amet</strong>, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
-</ul>
-<ol>
-  <li>Lorem ipsum dolor, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
-  <li>Lorem ipsum dolor <strong>sit amet</strong></li>
-  <li>Lorem ipsum dolor <strong>sit amet</strong>, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
-</ol>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt indywidualny</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="vendor/bootstrap-grid.css"/>
+    <link rel="stylesheet" href="vendor/Glyphter.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="test topbar">
+            <ul>
+              <li><a href="#"><i class="fas fa-sign-out-alt"></i></a></li>
+              <li><a href="#"><i class="far fa-user-circle"></i>Leonardo DiCaprio</a></li>
+              <li><a href="#"><i class="far fa-bell"></i></a></li>
+              <li><a href="#"><i class="fas fa-wallet"></i>1,500.00<i class="fas fa-angle-down"></i></a></li>
+            </ul>
+          </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1">
+          <div id="sidebar" class="sidebar-field">
+            <div class="titleHamburger">
+            <h4>Just do it!!</h4>
+            <p class="hamb"></p>
+          </div>
+            <ul>
+              <li><a href="#"><i class="far fa-star"></i>General</a></li>
+              <li><a href="#"><i class="fas fa-server"></i>Details</a></li>
+              <li><a href="#"><i class="fas fa-link"></i>Links</a></li>
+              <li><a href="#"><i class="fas fa-th-large"></i>Banners</a></li>
+              <li><a href="#"><i class="far fa-user"></i>Personal data</a></li>
+              <li><a href="#"><i class="far fa-user"></i>Payout</a></li>
+              <li><a href="#"><i class="fas fa-undo"></i>Postback</a></li>
+          </ul>
+          <div class="row">
+            <h3 class="menager">TWÓJ MANAGER</h3>
+            <div class="manager col-md-11">
+              <img class="menager" src='https://image-uniservice.linternaute.com/image/450/4/1213354042/1864638.jpg' alt="Manager">
+              <p>Marcin P.</p>
+              <i class="greendot">i</i>
+            </div>
+          </div>
+          <ul id="sidebar-topbar">
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i></a></li>
+              <li><a href="#"><i class="far fa-user-circle"></i>Leonardo DiCaprio</a></li>
+              <li><a href="#"><i class="far fa-bell"></i></a></li>
+              <li><a href="#"><i class="fas fa-wallet"></i>1,500.00<i class="fas fa-angle-down"></i></a></li>
+          </ul>
+          </div>
+        </div>
+        <div class="rest col-md-11" style="margin-top: 40px;">
+          
+          <div id="content">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" onclick="myFunction()" id="sidebarCollapse">
+                        <p class="hamburger"></p>
+                    </button>
+        
+                </div>
+            </nav>
+        </div>
+          <div class="row usu">
+            <div class="col-md-12">
+              <div class="test statistics">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>
+                    GENERAL STATISTICS
+                  </h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="dataClass col-md-12">
+
+                    <div class="datepicker">
+                      <form>
+                        <input type="date" value="2016-05-16" class="unstyled">
+                        <input type="date" id="icon" style="text-indent: 17px;" value="2016-05-16" class="unstyled">
+                        <a href="#" class="btn btn-sm btn-add"><i class="fas fa-redo-alt"></i></a>
+                      </form>
+                      
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                 <div class="row">
+                   <div class="col-md-3">
+
+                   </div>
+                   <div class="table col-md-3">
+                     <table class="table1">
+                       <tr>
+                         <td>Visit singups</td>
+                         <th>124</th>
+                       </tr>
+                       <tr> 
+                         <td>FTD</td>
+                         <th>445</th>
+                       </tr>
+                     </table>
+                   </div>
+                   <div class="table col-md-3">
+                    <table class="table1">
+                      <tr>
+                        <td>Next deposit</td>
+                        <th>564</th>
+                      </tr>
+                      <tr> 
+                        <td>Turn over</td>
+                        <th>432</th>
+                      </tr>
+                    </table>
+                   </div>
+                   <div class="col-md-3">
+                  </div>
+                 </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-9">
+                  <h3 class="legendTitle">Earning chart</h3>
+                </div>
+              </div>
+              <div class="row">
+                
+                <div class="legend col-md-12">
+                  <a href="#"><i class="fas fa-wallet"></i>Singups</a>
+                  <a href="#"><i class="fas fa-wallet"></i>FTD</a>
+                  <a href="#"><i class="fas fa-wallet"></i>Earned</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="chartImage col-md-12">
+                  <img alt="Wykres1" src="https://warsztatanalityka.pl/wp-content/uploads/2018/05/ile-tyg1.png">
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="row usu">
+            <div class="col-md-12">
+              <div class="test testFour">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>
+                    LINKS
+                  </h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="button col-md-12">
+                  <a href="#" class="btn btn-add"> + add new</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                  <div class="col-md-3">
+                  </div>
+                  <div class="linkList col-md-7">
+                    <div class="table">
+                      <table>
+                        <tr>
+                          <td>Homepage</td>
+                          <th><a href="www.homepage.com">http://homepage.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Currently offer</td>
+                          <th><a href="www.currently.com">http://currently.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>blurpix</td>
+                          <th><a href="www.blurpix.com">http://blurpix.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Your Site</td>
+                          <th><a href="www.yoursite.com">http://yoursite.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Google</td>
+                          <th><a href="www.google.com">http://google.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Facebook</td>
+                          <th><a href="www.facebook.com">http://facebook.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Dashboard</td>
+                          <th><a href="www.dashboard.com">http://dashboard.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Blurax</td>
+                          <th><a href="www.blurax.com">http://blurax.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Piece of Wine</td>
+                          <th><a href="www.pieceofwine.com">http://pieceofwine.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Twitter</td>
+                          <th><a href="www.twitter.com">http://twitter.com</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                      </table>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="button col-md-12">
+                  <a href="#" class="btn btn-add"> + add new</a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>

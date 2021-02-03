@@ -1,0 +1,172 @@
+.titleHamburger {
+  display: flex;
+}
+  
+.hamb {
+  width: 40px;
+  height: 20px;
+  border-top: 5px solid #ffff;
+  position: relative;
+  margin-left: 30px;
+  transform: translateY(15px);
+}
+  
+.hamb::before, .hamb::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 5px solid #ffff;
+  transform: translateY(8px);
+}
+  
+.hamb::after {
+  transform: translateY(20px);
+}
+  
+.sidebar-field {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $numbers;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-weight: 100;
+  
+  ul {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.menager {
+  font-size: 15px;
+  border: none;
+  
+}
+
+.manager {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  p {
+    color: #b88888;
+  }
+
+  .greendot {
+    font-size: 0;
+    background-color: forestgreen;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    padding: 3px;
+    position: absolute;
+    transform: translateX(-12px);
+  }
+}
+
+.sidebar-field a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: $sidebar-menu;
+  display: block;
+  margin: 15px;
+}
+    
+.sidebar-field a:hover {
+  background: #b88888;
+  border-left: 10px solid  $button-color;
+}
+  
+.sidebar-field i{
+  padding-right: 20px;
+  margin: 0;
+}
+
+
+#content {
+  margin-left: 2%;
+}
+
+#content {
+  height: 0px;
+}
+
+#sidebar-topbar {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+  #content {
+    height: 21px;
+  }
+
+  .sidebar-field {
+    width: 0px;
+  }
+
+  .usu {
+    display: none !important;
+  }
+
+  #sidebarCollapse {
+    opacity: 1;
+    border: none;
+  
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 20px;
+    border-top: 5px solid #000;
+    position: relative;
+    margin-left: 30px;
+    transform: translateY(15px);
+  }
+
+  .hamb {
+    display: none;
+  }
+    
+  .hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid #000;
+    transform: translateY(8px);
+  }
+    
+  .hamburger::after {
+    transform: translateY(20px);
+  }
+
+  #sidebar.active {
+    width: 180px;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  #sidebar-topbar.active {
+    display: block;
+    margin-top: 20%;
+  }
+
+  #content.active {
+    margin-left: 35%;
+  }
+  
+}

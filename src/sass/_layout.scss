@@ -1,0 +1,56 @@
+h1 {
+  font-family: $general-font-style;
+  color: $general-font-color;
+}
+  
+a {
+  font-size: 15px;
+}
+  
+h4 {
+  color: $sidebar-menu;
+  font-size: 25px;
+}
+  
+.container {
+  margin: 0;
+}
+  
+h3 {
+  text-align: left;
+  font-size: 25px;
+  border-bottom: 1px solid #bbb ;
+  font-family: $general-font-style;
+  color: $general-font-color;
+}
+  
+body {
+  background-color: #f2f2f2;
+}
+  
+.rest {
+  transform: translateX(-5px);
+  
+}
+
+.usu {
+  padding: 25px;
+}
+
+#sidebarCollapse {
+  opacity: 0;
+}
+
+.test {
+  background-color: $sidebar-menu;
+  margin-bottom: 20px;
+}
+
+.statistics {
+  height: auto;
+  text-align: center;
+    
+  .chartImage {
+    margin: 50px 0;
+  }
+}

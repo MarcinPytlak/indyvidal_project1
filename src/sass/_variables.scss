@@ -2,12 +2,25 @@
 $sidebar-menu: #ffffff;
 $general-font-color: #cccccc;
 $numbers: #000000;
+$button-color: #ff9900;
 
 /* fonts */
 $general-font-style: "Times New Roman", Times, serif;
 $headers-font-style: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-h1 {
-  font-family: $general-font-style;
-  color: $general-font-color;
+.btn-add {
+  background-color: $button-color;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 35px 0;
 }
+
+.btn-sm {
+  padding: 9px;
+}
+
