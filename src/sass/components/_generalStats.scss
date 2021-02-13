@@ -25,14 +25,15 @@
 }
 
 .table1 {
-  width: 500px;
+  width: 25rem;
   margin: 40px 0;
-  border-collapse: collapse;
+  border-collapse: separate;
 
   td, th {
     color: $general-font-color;
     text-align: left;
-    font-size: 25px;
+    font-size: 2rem;
+    
   }
   
   th {
@@ -89,3 +90,92 @@
   margin-top: 30px;
 }
 
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: auto;
+  max-width: auto;
+}
+
+.scroll-wrapper img {
+  width: auto;
+  max-width: auto;
+}
+
+@media only screen and (max-width: 640px) {
+  .scroll-wrapper img {
+    width: 90%;
+    max-width: auto;
+  }
+
+  .datepicker form{
+    display: inline-block;
+    padding: 10px;
+    padding-right: 20px;
+  
+    input {
+      font-size: 18px;
+      display: inline-block;
+      padding-left: 0;
+      margin-left: 0;
+      width: 35%;
+    }
+
+    #icon {
+      width: 55%;
+    }
+  }
+
+  img {
+    width: auto;
+  }
+
+  .table1 {
+    
+    transform: translateX(15px);
+  }
+
+  .legend {
+    display: block;
+    text-align: center;
+
+    i {
+      padding: 5px;
+    }
+
+    a {
+      display: block;
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 2000px) {
+  .table1 {
+    display: inline-block;
+    width: auto;
+
+    th {
+      border: none;
+    }
+
+    td, th {
+      display: inline-block;
+      font-size: 20px;
+    }
+  } 
+}
+
+@media only screen and (max-width: 840px) {
+  .datepicker a {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    width: 20px;
+    transform: translateX(90px);
+  }
+}

@@ -2,7 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projekt indywidualny</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="vendor/bootstrap-grid.css"/>
@@ -15,12 +15,20 @@
   <body>
     <div class="test topbar">
             <ul>
-              <li><a href="#"><i class="fas fa-sign-out-alt"></i></a></li>
+              <li><a href="#" id="myBtn" onclick="openPopup()"><i class="fas fa-sign-out-alt"></i></a></li>
               <li><a href="#"><i class="far fa-user-circle"></i>Leonardo DiCaprio</a></li>
               <li><a href="#"><i class="far fa-bell"></i></a></li>
               <li><a href="#"><i class="fas fa-wallet"></i>1,500.00<i class="fas fa-angle-down"></i></a></li>
             </ul>
-          </div>
+      </div>
+      <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Czy chcesz wyjść??</h3>
+        <a href="#" class="btn btn-add btn-cancel">Pozostań</a>
+        <a href="#" class="btn btn-add">Wyjdź</a>
+      </div>
+    </div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-1">
@@ -30,13 +38,14 @@
             <p class="hamb"></p>
           </div>
             <ul>
-              <li><a href="#"><i class="far fa-star"></i>General</a></li>
-              <li><a href="#"><i class="fas fa-server"></i>Details</a></li>
-              <li><a href="#"><i class="fas fa-link"></i>Links</a></li>
-              <li><a href="#"><i class="fas fa-th-large"></i>Banners</a></li>
-              <li><a href="#"><i class="far fa-user"></i>Personal data</a></li>
-              <li><a href="#"><i class="far fa-user"></i>Payout</a></li>
-              <li><a href="#"><i class="fas fa-undo"></i>Postback</a></li>
+              <li><a href="#general"><img class="sidebarPhoto" src="./images/icons/general.svg"></i>General</a></li>
+              <li><a href="#details"><img class="sidebarPhoto" src="./images/icons/details.svg"></i>Details</a></li>
+              <li><a href="#links"><img class="sidebarPhoto" src="./images/icons/links.svg"></i>Links</a></li>
+              <li><a href="#banners"><img class="sidebarPhoto" src="./images/icons/banners.svg"></i>Banners</a></li>
+              <li><a href="#personal"><img class="sidebarPhoto" src="./images/icons/personaldata.svg"></i>Personal data</a></li>
+              <li><a href="#payout"><img class="sidebarPhoto" src="./images/icons/payout.svg"></i>Payout</a></li>
+              <li><a href="#postback"><img class="sidebarPhoto" src="./images/icons/postback.svg"></i>Postback</a></li>
+              
           </ul>
           <div class="row">
             <h3 class="menager">TWÓJ MANAGER</h3>
@@ -48,16 +57,14 @@
           </div>
           <ul id="sidebar-topbar">
             <li><a href="#"><i class="fas fa-sign-out-alt"></i></a></li>
-              <li><a href="#"><i class="far fa-user-circle"></i>Leonardo DiCaprio</a></li>
-              <li><a href="#"><i class="far fa-bell"></i></a></li>
-              <li><a href="#"><i class="fas fa-wallet"></i>1,500.00<i class="fas fa-angle-down"></i></a></li>
+            <li><a href="#"><i class="far fa-user-circle"></i>Leonardo DiCaprio</a></li>
+            <li><a href="#"><i class="far fa-bell"></i></a></li>
+            <li><a href="#"><i class="fas fa-wallet"></i>1,500.00<i class="fas fa-angle-down"></i></a></li>
           </ul>
           </div>
         </div>
         <div class="rest col-md-11" style="margin-top: 40px;">
-          
-          <div id="content">
-            <nav class="navbar">
+          <nav class="navbar">
                 <div class="container-fluid">
                     <button type="button" onclick="myFunction()" id="sidebarCollapse">
                         <p class="hamburger"></p>
@@ -65,8 +72,10 @@
         
                 </div>
             </nav>
+          <div id="content">
+            
         </div>
-          <div class="row usu">
+          <div class="row post" id="general">
             <div class="col-md-12">
               <div class="test statistics">
               <div class="row">
@@ -141,14 +150,21 @@
                 </div>
               </div>
               <div class="row">
+                <div class="scroll-wrapper">
                 <div class="chartImage col-md-12">
                   <img alt="Wykres1" src="https://warsztatanalityka.pl/wp-content/uploads/2018/05/ile-tyg1.png">
+                </div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="testChart">
+                  <canvas id="myChart"></canvas>
                 </div>
               </div>
             </div>
             </div>
           </div>
-          <div class="row usu">
+          <div class="row post inactive" id="links">
             <div class="col-md-12">
               <div class="test testFour">
               <div class="row">
@@ -170,6 +186,7 @@
                   </div>
                   <div class="linkList col-md-7">
                     <div class="table">
+                      <div class="scroll-wrapper">
                       <table>
                         <tr>
                           <td>Homepage</td>
@@ -232,6 +249,7 @@
                           <th><i class="far fa-trash-alt"></i></th>
                         </tr>
                       </table>
+                      </div>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -247,9 +265,233 @@
             </div>
             </div>
           </div>
+          <div class="row post inactive" id="banners">
+            <div class="col-md-12">
+              <div class="test testFour">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>
+                    BANNERS
+                  </h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="button col-md-12">
+                  <a href="#" class="btn btn-add"> + add new</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                  <div class="col-md-3">
+                  </div>
+                  <div class="linkList col-md-7">
+                    <div class="table">
+                      <div class="scroll-wrapper">
+                      <table>
+                        <tr>
+                          <td>Banner main</td>
+                          <th><a href="www.webside.com/bannermain">http://www.webside.com/bannermain.gif</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Sing up banner</td>
+                          <th><a href="www.webside.com/singup">http://www.webside.com/singup.gif</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Banner left side</td>
+                          <th><a href="www.webside.com/leftside">http://www.webside.com/leftside.gif</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Vertical banner</td>
+                          <th><a href="www.webside.com/vert">http://www.webside.com/vert.gif</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Front banner</td>
+                          <th><a href="www.webside.com/front">http://www.webside.com/front.gif</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        <tr>
+                          <td>Horizontal banner</td>
+                          <th><a href="www.webside.com/horizontal">http://www.webside.com/horizontal.gif</a></th>
+                          <th><i class="fas fa-link"></i></th>
+                          <th><i class="far fa-trash-alt"></i></th>
+                        </tr>
+                        
+                      </table>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="button col-md-12">
+                  <a href="#" class="btn btn-add"> + add new</a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="row post inactive" id="personal">
+            <div class="col-md-12">
+            <div class="test personal-data">
+              <h3>PERSONAL DATA</h3>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="formulage-data">
+                    <div class="row">
+                  <div class="col-md-3">
+
+                  </div>
+                  <div class="formulage col-md-6">
+                    <form action="" method="POST">
+                      <div class="field">
+                        <ul>
+                          <li>
+                        <label>Imię</label>
+                        <input type="text" name="user-name">
+                          </li>
+                          <li>
+                        <label>Nazwisko</label>
+                        <input type="text" name="user-surname">
+                          </li>
+                          <li>
+                        <label>E-mail</label>
+                        <input type="email" name="user-email">
+                          </li>
+                          <li>
+                        <label>Numer telefonu</label>
+                        <input type="tel" pattern="[+]{1}[0-9]{11,14}" required name="user-phone" placeholder="Format=+48xxxxxxxxxx">
+                          </li>
+                        </ul>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-3">
+                    
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="formulage-data">
+                    <div class="row">
+                  <div class="col-md-3">
+
+                  </div>
+                  <div class="formulage col-md-6">
+                    <form action="" method="POST">
+                      <div class="field">
+                        <ul>
+                          <li>
+                        <label>Skype</label>
+                        <input type="text" name="user-skype">
+                          </li>
+                          <li>
+                        <label>ICQ</label>
+                        <input type="text" name="user-ICQ">
+                          </li>
+                          <li>
+                        <label>Msn</label>
+                        <input type="text" name="user-Msn">
+                          </li>
+                        </ul>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-3">
+                    
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="formulage-data">
+                    <div class="row">
+                  <div class="col-md-3">
+
+                  </div>
+                  <div class="formulage col-md-6">
+                    <form action="" method="POST">
+                      <div class="field">
+                        <ul>
+                          <li>
+                        <label>Wallet</label>
+                        <input type="text" name="user-wallet">
+                          </li>
+
+                        </ul>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-3">
+                    
+                  </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="formulage-data">
+                    <div class="row">
+                  <div class="col-md-3">
+
+                  </div>
+                  <div class="formulage col-md-6">
+                    <form action="" method="POST">
+                      <div class="field">
+                        <ul>
+                          <li>
+                        <label>Password</label>
+                        <input type="password" name="user-password">
+                          </li>
+                          <li>
+                        <label>Repeat</label>
+                        <input type="password" name="user-repeat">
+                          </li>
+                          
+                        </ul>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-3">
+                    
+                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="button col-md-12">
+                    <a href="#" class="btn btn-add">Save</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
